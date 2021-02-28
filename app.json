@@ -1,0 +1,12 @@
+{
+  "name": "learn_on_willcamp",
+  "displayName": "learn_on_willcamp",
+  "expo": {
+    "name": "learn_on_willcamp",
+    "slug": "learn_on_willcamp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
