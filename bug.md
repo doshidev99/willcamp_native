@@ -39,3 +39,10 @@ Then install pod again
   defaultConfig {
   multiDexEnabled true //Add this line
   }
+
+
+### note
+
+The different android and ios 
+- source url image android and ios
+- Button 
