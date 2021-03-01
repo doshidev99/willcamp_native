@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { View, Text } from "react-native";
 
-export function FlexCpn() {
+const FlexCpn = memo(() => {
+  console.log("[FlexCpn] rendering... 🚀");
   return (
     <View>
       <View style={{ width: 50, height: 50, backgroundColor: "red" }} />
@@ -9,7 +10,7 @@ export function FlexCpn() {
       <View style={{ width: 50, height: 50, backgroundColor: "blue" }} />
     </View>
   );
-}
+});
 
 /* 
 	flex: column
@@ -18,3 +19,5 @@ export function FlexCpn() {
 	flex: row
 	align-items: column
 */
+
+export { FlexCpn };

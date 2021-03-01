@@ -6,6 +6,7 @@ import { ScrollViewCpn } from "./ScrollViewCpn";
 import { FlatListCpn } from "./FlatListCpn";
 import { ModalCpn } from "./ModalCpn";
 import { SectionListCpn } from "./SectionListCpn";
+import { LifeCycleCpn } from "./lifeCycleCpn";
 
 export {
   ImageCpn,
@@ -15,5 +16,6 @@ export {
   ScrollViewCpn,
   FlatListCpn,
   ModalCpn,
-  SectionListCpn
+  SectionListCpn,
+  LifeCycleCpn,
 };
