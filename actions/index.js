@@ -1,4 +1,9 @@
-import { ADD_NEW_TASK, TOGGLE_ONE_TASK } from "./actionType";
+import {
+  ADD_NEW_TASK,
+  TOGGLE_ONE_TASK,
+  INCREMENT,
+  DECREMENT,
+} from "./actionType";
 
 let newTaskId = 0;
 
@@ -18,3 +23,17 @@ export const toggleTask = (taskId) => {
 };
 
 // type is required
+
+export const incrementAction = (step) => {
+  return {
+    type: INCREMENT,
+    step: step,
+  };
+};
+
+export const decrementAction = (step) => {
+  return {
+    type: DECREMENT,
+    step: step,
+  };
+};
