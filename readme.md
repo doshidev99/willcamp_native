@@ -1,3 +1,3 @@
 ## GIF Flow
 
-![FlowRedux](./images/flow.gif)
+![FlowRedux](./images/img.png)
