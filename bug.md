@@ -2,7 +2,6 @@
 
 - Run IOS
 
-
 - Bug pod install
 
 * [solution] :
@@ -25,14 +24,13 @@ Then install pod again
 - Run on device
 
 - [solution] :
-  step 1: mode dev on device
-  step 2: transfer file debug on device
-  step 3: adb devices ( show list device )
-  step 3: yarn android --deviceId=deviceId
+- step 1: mode dev on device
+- step 2: transfer file debug on device
+- step 3: adb devices ( show list device )
+- step 3: yarn android --deviceId=deviceId
+- local network : ip:8081
 
-	local network : ip:8081
-
--Task :app:mergeDexRelease FAILED
+- Task :app:mergeDexRelease FAILED
 
 - [solution]:
   At Path android/app/build.gradle
@@ -40,9 +38,8 @@ Then install pod again
   multiDexEnabled true //Add this line
   }
 
+### Note
 
-### note
+The different android and ios
 
-The different android and ios 
-- source url image android and ios
-- Button 
+- Button

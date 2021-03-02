@@ -1,24 +1,34 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Platform } from "react-native";
 
-import { ImageCpn, FlexCpn } from "./components";
+//redux
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+
+import { rootReducers } from "./reducers";
+
+import AddContainer from "./containers/AddContainer";
+import TaskListContainer from "./containers/TaskListContainer";
+
+let store = createStore(rootReducers);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={{ width: 50, height: 50, backgroundColor: "red" }} />
-      <View style={{ width: 50, height: 50, backgroundColor: "green" }} />
-      <View style={{ width: 50, height: 50, backgroundColor: "blue" }} />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <AddContainer />
+        <View style={{ marginTop: 40 }}>
+          <TaskListContainer />
+        </View>
+      </View>
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 35,
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-between"
+    paddingTop: Platform.OS === "ios" ? 35 : 0,
+    backgroundColor: "tomato",
   },
 });
