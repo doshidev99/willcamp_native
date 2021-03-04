@@ -1,5 +1,5 @@
 import { AddComponent } from "../components";
-import { addNewTask } from "../actions";
+import { addNewTask } from "../redux/actions";
 
 import { connect } from "react-redux";
 

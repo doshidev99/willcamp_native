@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../actions/actionType";
+import * as S from "../actionTypes";
 
 import { delay } from "redux-saga";
 import { put, takeEvery } from "redux-saga/effects";
@@ -18,6 +18,6 @@ function* decrement() {
 }
 
 export function* watchIncrement() {
-  yield takeEvery(INCREMENT, increment);
-  yield takeEvery(DECREMENT, decrement);
+  yield takeEvery(S.INCREMENT, increment);
+  yield takeEvery(S.DECREMENT, decrement);
 }

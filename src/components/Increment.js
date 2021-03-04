@@ -52,7 +52,7 @@ const Increment = ({ onIncrement, onDecrement, times }) => {
           </Text>
         </Button>
       </View>
-      <Text style={{ color: "yellow", fontSize: 17 }}> Count: {times}</Text>
+      <Text style={{ color: "purple", fontSize: 17 }}> Count: {times}</Text>
     </View>
   );
 };

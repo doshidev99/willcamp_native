@@ -1,10 +1,10 @@
-import { INCREMENT, DECREMENT } from "../actions/actionType";
+import * as S from "../actionTypes";
 
 export const counterReducers = (times = 0, action) => {
   switch (action.type) {
-    case INCREMENT:
+    case S.INCREMENT:
       return times + action.step;
-    case DECREMENT:
+    case S.DECREMENT:
       return times - action.step;
     default:
       return times;

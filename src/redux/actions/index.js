@@ -1,15 +1,10 @@
-import {
-  ADD_NEW_TASK,
-  TOGGLE_ONE_TASK,
-  INCREMENT,
-  DECREMENT,
-} from "./actionType";
+import * as S from "../actionTypes";
 
 let newTaskId = 0;
 
 export const addNewTask = (inputTaskName) => {
   return {
-    type: ADD_NEW_TASK,
+    type: S.ADD_NEW_TASK,
     taskId: newTaskId++,
     taskName: inputTaskName,
   };
@@ -17,7 +12,7 @@ export const addNewTask = (inputTaskName) => {
 
 export const toggleTask = (taskId) => {
   return {
-    type: TOGGLE_ONE_TASK,
+    type: S.TOGGLE_ONE_TASK,
     taskId,
   };
 };
@@ -26,14 +21,21 @@ export const toggleTask = (taskId) => {
 
 export const incrementAction = (step) => {
   return {
-    type: INCREMENT,
+    type: S.INCREMENT,
     step: step,
   };
 };
 
 export const decrementAction = (step) => {
   return {
-    type: DECREMENT,
+    type: S.DECREMENT,
     step: step,
+  };
+};
+
+export const addMovieAction = (newMovie) => {
+  return {
+    type: S.FETCH_MOVIE,
+    newMovie,
   };
 };
