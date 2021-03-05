@@ -10,10 +10,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    // onFetchMovies: () => {
-    //   dispatch(S.fetchMovieAction({ name: "test", year: "test" }));
-    // },
-  };
+  return {};
 };
 export default connect(mapStateToProps, mapDispatchToProps)(MovieComponent);

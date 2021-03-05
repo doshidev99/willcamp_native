@@ -1,13 +1,11 @@
-import { applyMiddleware, compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from 'redux';
 
-import createSagaMiddleware from "redux-saga";
+import createSagaMiddleware from 'redux-saga';
+import { all } from 'redux-saga/effects';
 
-import { all, call } from "redux-saga/effects";
-
-import { sayHello, watchIncrement } from "./sagas/counterSagas";
-import { wathFetchMovies } from "./sagas/movieSagas";
-
-import reducers from "./reducers";
+import reducers from './reducers';
+import { sayHello, watchIncrement } from './sagas/counterSagas';
+import { wathFetchMovies } from './sagas/movieSagas';
 
 export const sagaMiddleware = createSagaMiddleware();
 
@@ -20,7 +18,7 @@ composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // es
 
 export default createStore(
   reducers,
-  composeEnhancers(applyMiddleware(sagaMiddleware))
+  composeEnhancers(applyMiddleware(sagaMiddleware)),
 );
 
 function* rootSaga() {

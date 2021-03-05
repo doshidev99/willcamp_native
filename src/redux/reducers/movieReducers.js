@@ -1,18 +1,19 @@
-import * as S from "../actionTypes";
+import * as S from '../actionTypes';
 
-const initialState = [{ name: "Father 2", year: "2021" }];
+const initialState = [{ name: 'Father 2', year: '2021' }];
 
-export const movieReducers = (movies = initialState, action) => {
-  switch (action.type) {
+// eslint-disable-next-line import/prefer-default-export
+export const movieReducers = (movies = initialState, { payload, type }) => {
+  switch (type) {
     // eslint-disable-next-line no-console
     case S.FETCH_SUCCESSDED:
-      return action.receivedMovies;
+      return [...movies, ...payload];
 
     case S.FETCH_FAILED:
       return [];
 
     case S.ADD_MOVIE:
-      return [...movies, action.newMovie];
+      return [...movies];
 
     default:
       return movies;
