@@ -1,6 +1,6 @@
-import StyleSheet from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   headline: {
     padding: 10,
     fontSize: 15,
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-
-export default styles;
