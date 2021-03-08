@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import {
   FlatList,
@@ -8,11 +7,16 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 import { useDispatch } from 'react-redux';
+
+import PropTypes from 'prop-types';
+
 import styles from './styles';
 
-const MoviceComponent = ({ movies }) => {
+const MoviceComponent = ({ movies, navigation }) => {
   const dispatch = useDispatch();
 
+  // eslint-disable-next-line no-console
+  console.log(navigation, '<----');
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
@@ -59,7 +63,8 @@ const MoviceComponent = ({ movies }) => {
       >
         <Button
           containerStyle={{ padding: 15, borderRadius: 5, backgroundColor: 'darkviolet' }}
-          onPress={onFetchMovies}
+          // onPress={onFetchMovies}
+          onPress={() => navigation.navigate('Increment')}
         >
           <Text style={styles.rootColor}>Fetch movies</Text>
         </Button>
@@ -100,10 +105,12 @@ const MoviceComponent = ({ movies }) => {
 
 MoviceComponent.propTypes = {
   movies: PropTypes.instanceOf(Array),
+  navigation: PropTypes.func,
 };
 
 MoviceComponent.defaultProps = {
   movies: [],
+  navigation: () => { },
 };
 
 export default MoviceComponent;

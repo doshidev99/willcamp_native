@@ -1,15 +1,9 @@
-import { MovieComponent } from "../components";
-import * as S from "../redux/actions";
+import { connect } from 'react-redux';
+import { MovieComponent } from '../components';
 
-import { connect } from "react-redux";
+const mapStateToProps = (state) => ({
+  movies: state.movieReducers,
+});
 
-const mapStateToProps = (state) => {
-  return {
-    movies: state.movieReducers,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
+const mapDispatchToProps = () => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(MovieComponent);
